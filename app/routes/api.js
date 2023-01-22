@@ -1,9 +1,9 @@
-module.exports = (application) => {
+export default function(application) {
     application.get('/api', (req, res) => {
-        application.app.controllers.api.getWebshots(application, req, res)
+        application.getWebshots(application, req, res)
     })
 
     application.post('/api/website', (req, res) => {
-        application.app.controllers.api.insertWebshot(application, req, res)
+        application.insertWebshot(application, req, res)
     })
 }

@@ -1,10 +1,10 @@
-const express = require('express')
-const consign = require('consign')
+import express from 'express'
+import { getWebshots, insertWebshot } from '../app/controllers/api.js'
+import apiRoute from '../app/routes/api.js'
 const app = express()
 
-consign()
-    .include('app/controllers')
-    .then('app/routes')
-    .into(app)
+app.getWebshots = getWebshots
+app.insertWebshot = insertWebshot
+app.apiRoute = apiRoute(app)
 
-module.exports = app
+export default app

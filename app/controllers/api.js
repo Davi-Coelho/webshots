@@ -1,14 +1,11 @@
-// const puppeteer = require('puppeteer')
+import captureWebsite from 'capture-website'
 
-module.exports.getWebshots = async (application, req, res) => {
-    // const browser = await puppeteer.launch()
-    // const page = await browser.newPage()
-    // const base64 = await page.screenshot({ encoding: "base64" })
-    // await browser.close()
-    // console.log(base64)
-    // res.send(base64)
+export async function getWebshots (application, req, res) {
+    const base64 = await captureWebsite.base64('https://www.google.com')
+    console.log(base64)
+    res.send(base64)
 }
 
-module.exports.insertWebshot = (application, req, res) => {
+export async function insertWebshot (application, req, res) {
 
 }
