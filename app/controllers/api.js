@@ -12,7 +12,7 @@ export async function getWebshots (application, req, res) {
 
 export async function insertWebshot (application, req, res) {
     const siteName = req.query.siteName
-    const SiteDAO = new application.SiteDAO(application.SiteModel)
+    const SiteDAO = new application.SiteDAO(application.siteModel)
 
     const base64 = await captureWebsite.base64(siteName, {
         type: "png",
