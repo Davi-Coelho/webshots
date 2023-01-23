@@ -5,7 +5,7 @@ export async function getWebshots (application, req, res) {
     const sites = await SiteDAO.getAllSites()
     let html = ''
     sites.forEach(el => {
-        html += `<a href="https://${el.name}"><img src='data:image/png;base64,${el.base64}'  alt=${el.name}/></a>\n`
+        html += `<a href="${el.name}"><img src='data:image/png;base64,${el.base64}'  alt=${el.name}/></a>\n`
     })
     res.send(sites)
 }
