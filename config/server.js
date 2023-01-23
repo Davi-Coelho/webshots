@@ -2,7 +2,7 @@ import express from 'express'
 import { getWebshots, insertWebshot } from '../app/controllers/api.js'
 import apiRoute from '../app/routes/api.js'
 import SiteDAO from "../app/models/siteDAO.js";
-import { siteModel } from './dbConnection'
+import { siteModel } from './dbConnection.js'
 const app = express()
 
 app.getWebshots = getWebshots
