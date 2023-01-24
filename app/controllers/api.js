@@ -7,7 +7,7 @@ export async function getWebshots (application, req, res) {
     sites.forEach(el => {
         html += `<a href="${el.name}"><img src='data:image/png;base64,${el.base64}'  alt=${el.name}/></a>&#10;`
     })
-    res.send(sites)
+    res.send(html)
 }
 
 export async function insertWebshot (application, req, res) {
