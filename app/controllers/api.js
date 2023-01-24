@@ -1,7 +1,7 @@
 import captureWebsite from 'capture-website'
 
 export async function getWebshots (application, req, res) {
-    const SiteDAO = new application.SiteDAO(application.SiteModel)
+    const SiteDAO = new application.SiteDAO(application.siteModel)
     const sites = await SiteDAO.getAllSites()
     let html = ''
     sites.forEach(el => {
